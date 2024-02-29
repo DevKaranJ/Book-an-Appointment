@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_081240) do
     t.string "name", null: false
     t.string "image"
     t.text "description"
-    t.decimal "finance_fee", precision: 10, scale: 2
+    t.decimal "service_fee", precision: 10, scale: 2
     t.decimal "purchase_fee", precision: 10, scale: 2
     t.decimal "total_amount_payable", precision: 10, scale: 2
     t.integer "duration"

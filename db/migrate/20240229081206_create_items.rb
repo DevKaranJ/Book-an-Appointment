@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[7.1]
         t.string :name, null: false
         t.string :image
         t.text :description
-        t.decimal :finance_fee, precision: 10, scale: 2
+        t.decimal :service_fee, precision: 10, scale: 2
         t.decimal :purchase_fee, precision: 10, scale: 2
         t.decimal :total_amount_payable, precision: 10, scale: 2
         t.integer :duration
@@ -14,4 +14,3 @@ class CreateItems < ActiveRecord::Migration[7.1]
     end
   end
 end
-
