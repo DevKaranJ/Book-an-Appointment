@@ -70,3 +70,6 @@ end
 
 # Use PostgreSQL as the database for Active Record
 gem "pg"
+
+# Use Devise for user authentication
+gem 'devise'
