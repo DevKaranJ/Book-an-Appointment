@@ -73,3 +73,6 @@ gem "pg"
 
 # Use Devise for user authentication
 gem 'devise'
+
+# for handling CORS
+gem 'rack-cors'
