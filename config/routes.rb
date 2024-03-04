@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
-  resources :users, only: [:new, :create]
-
-
   root 'root#index'
 
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+
+  namespace :api do
+    resources :users, only: [:show]
+  end
+
+  get '*path', to: 'root#index'
 end
