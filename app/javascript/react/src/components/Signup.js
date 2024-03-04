@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [errors, setErrors] = useState(null);
@@ -14,7 +13,6 @@ const SignUp = () => {
       const response = await axios.post('/users', {
         user: {
           username,
-          email,
           password,
           password_confirmation: passwordConfirmation
         }
@@ -34,10 +32,6 @@ const SignUp = () => {
       <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </label>
       <label>
         Password:
