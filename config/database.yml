@@ -22,14 +22,14 @@ default: &default
 
 development:
   <<: *default
-  database: appointment_development
+  database: ament_development
 
 test:
   <<: *default
-  database: _test
+  database: ament_test
 
 production:
   <<: *default
-  database: appointment_production
-  username: appointment
-  password: <%= ENV["appointment_DATABASE_PASSWORD"] %>
+  database: ament_production
+  username: ament
+  password: <%= ENV["AMENT_DATABASE_PASSWORD"] %>

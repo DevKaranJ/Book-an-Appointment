@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './react/src/App';
 
-function App() {
-  return (<h1>Hello World!</h1>);
-}
-
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
-);
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+});
