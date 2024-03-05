@@ -18,16 +18,16 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <button type="submit">Log In</button>
+    <form onSubmit={handleSubmit} className="mt-4">
+      <div className="form-group">
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
+      </div>
+      <button type="submit" className="btn btn-primary">Log In</button>
     </form>
   );
 };

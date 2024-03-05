@@ -28,27 +28,27 @@ const SignUp = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <label>
-        Password Confirmation:
-        <input type="password" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} />
-      </label>
+    <form onSubmit={handleSubmit} className="mt-4">
+      <div className="form-group">
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <label htmlFor="passwordConfirmation">Password Confirmation:</label>
+        <input type="password" id="passwordConfirmation" className="form-control" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} />
+      </div>
       {errors && (
-        <div>
+        <div className="alert alert-danger">
           {Object.keys(errors).map((key) => (
             <p key={key}>{errors[key].join(', ')}</p>
           ))}
         </div>
       )}
-      <button type="submit">Sign Up</button>
+      <button type="submit" className="btn btn-primary">Sign Up</button>
     </form>
   );
 };
