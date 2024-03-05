@@ -1,4 +1,3 @@
-// components/Items.js
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchItems } from '../actions/items';
