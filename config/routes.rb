@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
   end
 
+  resources :items
+
+  # Move the wildcard route to the end
   get '*path', to: 'root#index'
 end
