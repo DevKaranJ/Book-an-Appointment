@@ -1,12 +1,15 @@
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './react/src/store';
 import App from './react/src/App';
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
+ReactDOM.render(
+  <Provider store={store}>
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-});
+    </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
+);
