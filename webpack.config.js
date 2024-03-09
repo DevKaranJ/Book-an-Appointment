@@ -1,29 +1,26 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  mode: 'production',
-  devtool: 'source-map',
+  mode: "development", // Change mode to development for easier debugging
   entry: {
-    application: './app/javascript/application.js',
+    application: "./app/javascript/application.js"
+  },
+  output: {
+    filename: "[name].js",
+    path: path.resolve(__dirname, "app/assets/builds"),
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
     ],
   },
-  output: {
-    filename: '[name].js',
-    sourceMapFilename: '[name].js.map',
-    path: path.resolve(__dirname, 'app/assets/builds'),
+  resolve: {
+    extensions: ['.js', '.jsx'], // Add .jsx if your components have that extension
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
