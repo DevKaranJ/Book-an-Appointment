@@ -17,19 +17,19 @@ default: &default
   encoding: unicode
   host: localhost
   username: postgres
-  password: 2580
+  password: ometman
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: ament_development
+  database: appointment_development
 
 test:
   <<: *default
-  database: ament_test
+  database: appointment_test1
 
 production:
   <<: *default
-  database: ament_production
-  username: ament
-  password: <%= ENV["AMENT_DATABASE_PASSWORD"] %>
+  database: appointment_production
+  username: appointment
+  password: <%= ENV["appointment_DATABASE_PASSWORD"] %>
