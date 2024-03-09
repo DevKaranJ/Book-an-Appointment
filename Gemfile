@@ -78,3 +78,4 @@ end
 gem 'bootstrap', '~> 5.3.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'sassc-rails'
+gem 'devise'
