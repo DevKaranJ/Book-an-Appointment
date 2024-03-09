@@ -4,13 +4,13 @@ import {
   Route,
   BrowserRouter,
 } from 'react-router-dom';
-import Reservations from './Main';
+import Authentication from './Authentication';
 
 const App = () => (
   <BrowserRouter>
-    <h1>App Component</h1>
+    <h1>App Component :Authentication</h1>
     <Routes>
-      <Route path="/" element={<Reservations />} />
+      <Route path="/" element={<Authentication/>} />
     </Routes>
   </BrowserRouter>
 );
