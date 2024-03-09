@@ -76,6 +76,5 @@ group :test do
 end
 
 gem 'bootstrap', '~> 5.3.0'
-gem 'sassc-rails'
 gem 'rack-cors', require: 'rack/cors'
-
+gem 'sassc-rails'
